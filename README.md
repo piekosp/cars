@@ -6,9 +6,15 @@ App is deployed on Heroku. You can check how it works here: https://cars-pawel.h
 
 ## instalation 
 1. clone the repository
-2. run docker-compose build
-3. run docker-compose up
-4. app is exposed on http://127.0.0.1:8000/
+2. create .env file in main directory and add SECRET_KEY and DEBUG
+    ***.env***
+    ```
+    SECRET_KEY={your secret key}
+    DEBUG={debug mode}
+    ```
+3. run docker-compose build
+4. run docker-compose up
+5. app is exposed on http://127.0.0.1:8000/
 
 ## endpoints
 - **POST /cars/**
