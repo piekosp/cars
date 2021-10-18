@@ -7,6 +7,7 @@ App is deployed on Heroku. You can check how it works here: https://cars-pawel.h
 ## instalation 
 1. clone the repository
 2. create .env file in main directory and add SECRET_KEY and DEBUG
+
     ***.env***
     ```
     SECRET_KEY={your secret key}
