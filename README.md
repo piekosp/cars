@@ -10,8 +10,8 @@ App is deployed on Heroku. You can check how it works here: https://cars-pawel.h
 
     ***.env***
     ```
-    SECRET_KEY={your secret key}
-    DEBUG={debug mode}
+    export SECRET_KEY={your secret key}
+    export DEBUG={debug mode}
     ```
 3. run docker-compose build
 4. run docker-compose up
