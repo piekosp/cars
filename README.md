@@ -11,43 +11,78 @@ App is deployed on Heroku. You can check how it works here: https://cars-pawel.h
 4. app is exposed on http://127.0.0.1:8000/
 
 ## endpoints
-- POST /cars/
+- **POST /cars/**
 
     *App check if car with given data exists. If yes, it adds it to database*
 
-    sample data:
-    
     ```python
     {
-    "make" : "Volkswagen",
-    "model" : "Golf",
+        "make" : "Volkswagen",
+        "model" : "Golf",
     }
     ```
 
-- DELETE /cars/{id}/
+- **DELETE /cars/{id}/**
 
     *Delete the car with the given id from database If the car doesn't exist in database - returns an error*
 
-- POST /rate/
+- **POST /rate/**
 
     *Add a rat for a car from 1 to 5*
 
-    sample data:
-
     ```python
     {
-    "car_id" : 1,
-    "rating" : 5,
+        "car_id" : 1,
+        "rating" : 5,
     }
     ```
 
-- GET /cars/
+- **GET /cars/**
 
     *Fetches a list of all cars already present in application database with their current average rate*
 
-- GET /popular/
+    Response:
+
+    ```python
+    [
+        {
+        "id" : 1,
+        "make" : "Volkswagen",
+        "model" : "Golf",
+        "avg_rating" : 5.0,
+        },
+        {
+        "id" : 2,
+        "make" : "Volkswagen",
+        "model" : "Passat",
+        "avg_rating" : 4.7,
+        }
+    ]
+    ```
+
+- **GET /popular/**
 
     *Returns top cars already present in the database ranking based on a number of rates*
+
+
+    Response:
+
+    ```python
+    [
+        {
+        "id" : 1,
+        "make" : "Volkswagen",
+        "model" : "Golf",
+        "rates_number" : 100,
+        },
+        {
+        "id" : 2,
+        "make" : "Volkswagen",
+        "model" : "Passat",
+        "rates_number" : 31,
+        }
+    ]
+    ```
 
 
 
