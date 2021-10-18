@@ -12,34 +12,41 @@ App is deployed on Heroku. You can check how it works here: https://cars-pawel.h
 
 ## endpoints
 - POST /cars/
+
     *App check if car with given data exists. If yes, it adds it to database*
 
     sample data:
-    '''python
+    
+    ```python
     {
     "make" : "Volkswagen",
     "model" : "Golf",
     }
-    '''
+    ```
 
 - DELETE /cars/{id}/
+
     *Delete the car with the given id from database If the car doesn't exist in database - returns an error*
 
 - POST /rate/
+
     *Add a rat for a car from 1 to 5*
 
     sample data:
-    '''python
+
+    ```python
     {
     "car_id" : 1,
     "rating" : 5,
     }
-    '''
+    ```
 
 - GET /cars/
+
     *Fetches a list of all cars already present in application database with their current average rate*
 
 - GET /popular/
+
     *Returns top cars already present in the database ranking based on a number of rates*
 
 
