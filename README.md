@@ -2,7 +2,7 @@
 It's a simple REST API application - a basic car makes and models database interacting with an external API (https://vpic.nhtsa.dot.gov/api/) checking if given car exisits.
 
 ## preview 
-App is deployed on Heroku. You can check how it works here: https://cars-pawel.herokuapp.com/. If website doesn't load please wait and reload site.
+App is deployed on Heroku. You can check how it works here: http://cars-pawel.herokuapp.com/. If website doesn't load please wait and reload site.
 
 ## instalation 
 1. clone the repository
