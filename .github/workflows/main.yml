@@ -17,11 +17,9 @@ jobs:
          echo SECRET_KEY="${{secrets.SECRET_KEY}}}" >> .env
          echo DJANGO_SECRET_KEY="${{secrets.SECRET_KEY}}}" >> .env
          cat .env
-      - name: "Run container"
+      - name: "Run container and test"
         run: |
           docker-compose up --build -d
-      - name: "Run test"
-        run: |
           docker-compose exec web python manage.py test
       - name: "Shut down container"
         if: always()
