@@ -19,7 +19,7 @@ jobs:
          cat .env
       - name: "Run container"
         run: |
-          docker-compose up build -d
+          docker-compose up --build -d
       - name: "Run test"
         run: |
           docker-compose exec web python manage.py test
