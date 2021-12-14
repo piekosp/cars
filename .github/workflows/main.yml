@@ -17,10 +17,13 @@ jobs:
          echo SECRET_KEY="${{secrets.SECRET_KEY}}}" >> .env
          echo DJANGO_SECRET_KEY="${{secrets.SECRET_KEY}}}" >> .env
          cat .env
-      - name: "Run tests"
+      - name: "Run continer"
         run: |
           docker-compose build
           docker-compose up
+          docker-compose exec web python manage.py test
+      - name: "Run test"
+        run: |
           docker-compose exec web python manage.py test
       - name: "Deploy on Heroku"
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
