@@ -22,7 +22,7 @@ jobs:
           docker-compose up --build -d
       - name: "Run tests"
         run: |
-          docker-compose run python manage.py test
+          docker-compose run web python manage.py test
       - name: "Shut down container"
         if: always()
         run: |
