@@ -22,8 +22,9 @@ jobs:
           docker-compose up --build -d
       - name: "Run test"
         run: |
-          docker-compose exec web python manage.py test
+          docker-compose exec -it web python manage.py test
       - name: "Shut down container"
+        if: always()
         run: |
           docker-compose down
       - name: "Deploy on Heroku"
