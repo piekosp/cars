@@ -6,13 +6,15 @@ on:
       - main
 
 jobs:
-  run:
+  create-env_file:
     runs-on: ubuntu-latest
-    steps: |
-      touch .env
-      echo DEBUG=${{secrets.DEBUG}} >> .env
-      echo SECRET_KEY=${{secrets.SECRET_KEY}}} >> .env
-      cat .env
+    steps:
+      - run: |
+         touch .env
+         echo DEBUG=${{secrets.DEBUG}} >> .env
+         echo SECRET_KEY=${{secrets.SECRET_KEY}}} >> .env
+         cat .env
+     
     
   build:
     runs-on: ubuntu-latest
