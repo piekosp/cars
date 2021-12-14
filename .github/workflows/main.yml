@@ -6,6 +6,14 @@ on:
       - main
 
 jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps: |
+      touch .env
+      echo DEBUG=${{secrets.DEBUG}} >> .env
+      echo SECRET_KEY=${{secrets.SECRET_KEY}}} >> .env
+      cat .env
+    
   build:
     runs-on: ubuntu-latest
     steps:
@@ -16,6 +24,3 @@ jobs:
           heroku_app_name: "cars-pawel-test-2" #Must be unique in Heroku
           heroku_email: "pawel@piekos.pl"
           usedocker: true
-        env:
-          HD_DEBUG: ${{secrets.DEBUG}}
-          HD_SECRET_KEY: ${{secrets.SECRET_KEY}}
