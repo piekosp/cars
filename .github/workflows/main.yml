@@ -17,5 +17,5 @@ jobs:
           heroku_email: "pawel@piekos.pl"
           usedocker: true
         env:
-          DEBUG: ${{secrets.DEBUG}}
-          SECRET_KEY: ${{secrets.SECRET_KEY}}
+          HD_DEBUG: ${{secrets.DEBUG}}
+          HD_SECRET_KEY: ${{secrets.SECRET_KEY}}
