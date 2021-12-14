@@ -16,8 +16,7 @@ jobs:
          echo SECRET_KEY="${{secrets.SECRET_KEY}}}" >> .env
          cat .env
       - name: "Run tests"
-      - uses: actions/checkout@v2
-      - run: |
+        run: |
           docker-compose up -d build 
           docker-compose exec web python manage.py test
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
