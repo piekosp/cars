@@ -16,3 +16,6 @@ jobs:
           heroku_app_name: "cars-pawel-test-2" #Must be unique in Heroku
           heroku_email: "pawel@piekos.pl"
           usedocker: true
+        env:
+          DEBUG: ${{secrets.DEBUG}}
+          SECRET_KEY: ${{secrets.SECRET_KEY}}
