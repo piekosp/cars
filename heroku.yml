@@ -9,6 +9,5 @@ release:
   command:
     - python manage.py migrate
     - python manage.py collectstatic --noinput
-    - heroku ps:scale web=1
 run:
   web: gunicorn my_site.wsgi:application
